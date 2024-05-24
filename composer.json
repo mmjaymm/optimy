@@ -1,0 +1,19 @@
+{
+    "name": "mjay/php_test_optimy",
+    "description": "Technical Assessment",
+    "autoload": {
+        "psr-4": {
+            "Class\\": "class/",
+            "Interfaces\\": "interfaces/",
+            "Utils\\": "utils/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mjay"
+        }
+    ],
+    "require": {
+      "ext-pdo": "*"
+    }
+}
