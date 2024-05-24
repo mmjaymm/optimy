@@ -21,19 +21,28 @@ require_once ROOT . '/vendor/autoload.php';
 //        }
 //    }
 //});
+/*
+ * list of repositories
+ * */
+$commentRepo = new Repositories\Comment\CommentRepository();
+$newsRepo = new Repositories\News\NewsRepository($commentRepo);
 
-$newsList = Utils\NewsManager::getInstance()->listNews();
-$comments = Utils\CommentManager::getInstance()->listComments();
+
+/*
+ * Create Object Instance
+ * News::class
+ * Comment::class
+ * */
+$newsList = Controllers\NewsManager::getInstance($newsRepo)->list();
+$comments = Controllers\CommentManager::getInstance($commentRepo);
 
 foreach ($newsList as $news) {
 	echo("############ NEWS " . $news->getTitle() . " ############\n");
 	echo($news->getBody() . "\n");
 	echo "<br>";
 
-	foreach ($comments as $comment) {
-		if ($comment->getNewsId() == $news->getId()) {
-			echo("Comment " . $comment->getId() . " : " . $comment->getBody() . "\n");
-			echo "<br>";
-		}
+	foreach ($comments->getComments($news->getId()) as $comment) {
+        echo("Comment " . $comment['id'] . " : " . $comment['body'] . "\n");
+        echo "<br>";
 	}
 }

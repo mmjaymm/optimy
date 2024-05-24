@@ -5,7 +5,9 @@
         "psr-4": {
             "Class\\": "class/",
             "Interfaces\\": "interfaces/",
-            "Utils\\": "utils/"
+            "Utils\\": "utils/",
+            "Controllers\\": "controllers/",
+            "Repositories\\": "repositories/"
         }
     },
     "authors": [

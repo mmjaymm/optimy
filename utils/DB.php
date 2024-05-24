@@ -8,17 +8,15 @@ use PDOException;
 class DB
 {
 	public PDO $pdo;
-
+    private string $dsn = 'mysql:dbname=optimy;host=127.0.0.1';
+    private string $user = 'root';
+    private string $password = '';
 	private static DB $instance;
 
 	protected function __construct()
 	{
         try {
-            $dsn = 'mysql:dbname=optimy;host=127.0.0.1';
-            $user = 'root';
-            $password = '';
-
-            $this->pdo = new \PDO($dsn, $user, $password);
+            $this->pdo = new \PDO($this->dsn, $this->user, $this->password);
         }catch (PDOException $ex) {
             die("Database Connection: Error " . $ex->getMessage());
         }

@@ -7,6 +7,8 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Utils\\' => array($baseDir . '/utils'),
+    'Repositories\\' => array($baseDir . '/repositories'),
     'Interfaces\\' => array($baseDir . '/interfaces'),
+    'Controllers\\' => array($baseDir . '/controllers'),
     'Class\\' => array($baseDir . '/class'),
 );

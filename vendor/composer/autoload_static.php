@@ -11,12 +11,17 @@ class ComposerStaticInit8d06fe5a0df83af4b7b549cb96476c07
         array (
             'Utils\\' => 6,
         ),
+        'R' => 
+        array (
+            'Repositories\\' => 13,
+        ),
         'I' => 
         array (
             'Interfaces\\' => 11,
         ),
         'C' => 
         array (
+            'Controllers\\' => 12,
             'Class\\' => 6,
         ),
     );
@@ -26,9 +31,17 @@ class ComposerStaticInit8d06fe5a0df83af4b7b549cb96476c07
         array (
             0 => __DIR__ . '/../..' . '/utils',
         ),
+        'Repositories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/repositories',
+        ),
         'Interfaces\\' => 
         array (
             0 => __DIR__ . '/../..' . '/interfaces',
+        ),
+        'Controllers\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/controllers',
         ),
         'Class\\' => 
         array (
